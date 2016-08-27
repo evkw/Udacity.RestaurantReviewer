@@ -1,6 +1,7 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
+import { FormsModule } from '@angular/forms';
 
 import { MdCoreModule } from '@angular2-material/core';
 import { MdProgressBarModule } from '@angular2-material/progress-bar';
@@ -9,24 +10,25 @@ import { MdCardModule } from '@angular2-material/card';
 import { MdMenuModule } from '@angular2-material/menu';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 import { MdIconModule } from '@angular2-material/icon';
+import { MdButtonModule } from '@angular2-material/button';
 
 import { routing } from './app.routing';
-
 import { AppComponent }  from './app.component';
-import { RestaurantService } from './restaurant-list/restaurant.service';
-import { RestaurantListComponent } from './restaurant-list';
-import { RestaurantListResolver } from './restaurant-list/restaurant-list.resolver';
-
-
+import { 
+  RestaurantService,
+  RestaurantListComponent,
+  RestaurantListResolver } from './restaurant-list';
+import { 
+  RestaurantFilterCompnent, 
+  RestaurantFilterService } from './filter';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
-
+    FormsModule,
     // Routes
     routing,
-
     // Material Design
     MdCoreModule,
     MdProgressBarModule,
@@ -34,15 +36,21 @@ import { RestaurantListResolver } from './restaurant-list/restaurant-list.resolv
     MdCardModule,
     MdMenuModule,
     MdToolbarModule,
-    MdIconModule
+    MdIconModule,
+    MdButtonModule
   ],
   declarations: [
+    //root
     AppComponent,
-    RestaurantListComponent
+    RestaurantListComponent,
+    RestaurantFilterCompnent
   ],
   providers: [
+    //restaurant-list providers
     RestaurantService,
-    RestaurantListResolver
+    RestaurantListResolver,
+    //filter providers
+    RestaurantFilterService
   ],
   bootstrap: [AppComponent]
 })

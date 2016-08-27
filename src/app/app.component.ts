@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { RestaurantFilterService } from './filter';
 
 @Component({
   moduleId: module.id,
@@ -7,4 +8,13 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.css']
 })
 
-export class AppComponent { }
+export class AppComponent { 
+
+  private filterHidden  = true;
+  constructor(private filterSvc: RestaurantFilterService) {}
+
+  toggleFilter() {
+    this.filterHidden = !this.filterHidden;
+    this.filterSvc.toggleFilter(this.filterHidden);
+  }
+}

@@ -1,8 +1,10 @@
+<app-restaurant-filter *ngIf="!filterHidden" (filterChanged)="filterChanged($event)"></app-restaurant-filter>
+
 <main class="content-page">
   <article class="restaurant-item" *ngFor="let restaurant of restaurants">
     <md-card>
       <md-card-header>
-        <img md-card-avatar src="{{restaurant.image}}">
+        <img md-card-avatar src="{{restaurant.image}}" alt="{{restaurant.name}} main pictute">
         <md-card-title>{{restaurant.name}}</md-card-title>
         <md-card-subtitle>{{restaurant.cuisine}}</md-card-subtitle>
       </md-card-header>

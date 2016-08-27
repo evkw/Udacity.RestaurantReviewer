@@ -1,25 +1,22 @@
-.app-icon-button {
-  box-shadow: none;
-  user-select: none;
-  background: none;
-  border: none;
-  cursor: pointer;
-  filter: none;
-  font-weight: normal;
-  height: auto;
-  line-height: inherit;
-  margin: 0;
-  min-width: 0;
-  padding: 0;
-  text-align: left;
-  text-decoration: none;
+.title {
+  width: 20%;
+  
+}
+.fill-space {
+  width: 70%;
+}
+.filter {
+  width: 10%;
 }
 
-.app-filter-menu {
-    padding: 0 14px 0 14px;
-    color: white;
-}
-
-.app-content {
-  padding: 20px;
+@media (max-width: 500px) {
+    .title {
+      width: 80%;
+    }
+    .fill-space {
+      width: 0%;
+    }
+    .filter {
+      width: 20%;
+    }
 }
