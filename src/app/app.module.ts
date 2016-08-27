@@ -21,6 +21,14 @@ import {
 import { 
   RestaurantFilterCompnent, 
   RestaurantFilterService } from './filter';
+import {
+  RestaurantReviewComponent,
+  RestaurantResolver,
+  ReviewListResolver,
+  ReviewService
+} from './restaurant-review';
+
+import { RestaurantComponent } from './restaurant';
 
 @NgModule({
   imports: [
@@ -40,17 +48,23 @@ import {
     MdButtonModule
   ],
   declarations: [
-    //root
+    // root
     AppComponent,
     RestaurantListComponent,
-    RestaurantFilterCompnent
+    RestaurantFilterCompnent,
+    RestaurantReviewComponent,
+    RestaurantComponent
   ],
   providers: [
-    //restaurant-list providers
+    // restaurant-list providers
     RestaurantService,
     RestaurantListResolver,
-    //filter providers
-    RestaurantFilterService
+    // filter providers
+    RestaurantFilterService,
+    // Restaurant review provider
+    ReviewService,
+    ReviewListResolver,
+    RestaurantResolver
   ],
   bootstrap: [AppComponent]
 })

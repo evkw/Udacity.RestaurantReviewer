@@ -13,4 +13,12 @@ export class RestaurantService {
     return this.http.get('./../../assets/Restaurant.json')
       .map(res => <RestaurantModel[]>res.json())
   }
+
+  getRestaurantById(restaurantId: number): Observable<RestaurantModel> {
+    return this.http.get('./../../assets/Restaurant.json')
+      .map(res => {
+        let restaurants = <RestaurantModel[]>res.json();
+        return restaurants.find(item => item.id == restaurantId);
+      })
+  }
 }
