@@ -1,0 +1,21 @@
+.content-page {
+  padding:20px;
+  flex-flow: wrap;
+  flex-wrap: wrap;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: center;
+}
+
+.restaurant-review {
+    width: 450px;
+}
+
+.review {
+  margin-top: 20px;
+}

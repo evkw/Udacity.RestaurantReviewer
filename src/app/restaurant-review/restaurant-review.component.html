@@ -1,0 +1,17 @@
+<main class="content-page">
+  <article class="restaurant-review">
+    <app-restaurant [restaurant]="restaurant"></app-restaurant>
+
+    <div class="review" *ngFor="let review of reviews">
+      <md-card>
+        <md-card-header>
+          <md-card-title>{{review.name}}</md-card-title>
+          <md-card-subtitle>{{review.date}}</md-card-subtitle>
+        </md-card-header>
+        <md-card-content>
+          {{review.comment}}
+        </md-card-content>
+      </md-card>
+    </div>
+  </article>
+</main>
