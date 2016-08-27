@@ -1,0 +1,25 @@
+<md-card>
+    <div class="filter">
+        <div class="filter-section">
+            <md-radio-group [(ngModel)]="filterModel.cuisine" (change)="changeFilter()">
+                <md-radio-button value="All" [checked]="true">All</md-radio-button>
+                <md-radio-button value="Thai">Thai</md-radio-button>
+                <md-radio-button value="Italian">Italian</md-radio-button>
+                <md-radio-button value="Mediterranean">Mediterranean</md-radio-button>
+                <md-radio-button value="Chinese">Chinese</md-radio-button>
+                <md-radio-button value="Cafe">Cafe</md-radio-button>
+                <md-radio-button value="Takeaway">Takeaway</md-radio-button>
+            </md-radio-group>
+        </div>
+
+        <div class="filter-section">
+            <md-radio-group [(ngModel)]="filterModel.city" (change)="changeFilter()">
+                <md-radio-button value="All" [checked]="true">All</md-radio-button>
+                <md-radio-button value="Adelaide">Adelaide</md-radio-button>
+                <md-radio-button value="Brisbane">Brisbane</md-radio-button>
+                <md-radio-button value="Melbourne">Melbourne</md-radio-button>
+                <md-radio-button value="Sydney">Sydney</md-radio-button>
+            </md-radio-group>
+        </div>
+    </div>
+</md-card>

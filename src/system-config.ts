@@ -25,6 +25,7 @@ const materialPkgs:string[] = [
   'menu',
   'toolbar',
   'icon',
+  'button',
 ];
 
 materialPkgs.forEach((pkg) => {
@@ -54,6 +55,7 @@ const barrels: string[] = [
   'app/shared',
   'app/restaurant',
   'app/restaurant-list',
+  'app/filter',
   /** @cli-barrel */
 ];
 
