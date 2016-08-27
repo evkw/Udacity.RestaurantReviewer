@@ -1,5 +1,6 @@
 import { NgModule }      from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpModule } from '@angular/http';
 
 import { MdCoreModule } from '@angular2-material/core';
 import { MdProgressBarModule } from '@angular2-material/progress-bar';
@@ -9,11 +10,22 @@ import { MdMenuModule } from '@angular2-material/menu';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 import { MdIconModule } from '@angular2-material/icon';
 
+import { routing } from './app.routing';
+
 import { AppComponent }  from './app.component';
+import { RestaurantService } from './restaurant-list/restaurant.service';
+import { RestaurantListComponent } from './restaurant-list';
+import { RestaurantListResolver } from './restaurant-list/restaurant-list.resolver';
+
+
 
 @NgModule({
-  imports: [ 
+  imports: [
     BrowserModule,
+    HttpModule,
+
+    // Routes
+    routing,
 
     // Material Design
     MdCoreModule,
@@ -23,9 +35,15 @@ import { AppComponent }  from './app.component';
     MdMenuModule,
     MdToolbarModule,
     MdIconModule
-    
-    ],
-  declarations: [ AppComponent ],
-  bootstrap: [ AppComponent ]
+  ],
+  declarations: [
+    AppComponent,
+    RestaurantListComponent
+  ],
+  providers: [
+    RestaurantService,
+    RestaurantListResolver
+  ],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

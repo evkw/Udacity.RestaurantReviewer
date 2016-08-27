@@ -1,0 +1,50 @@
+<main class="content-page">
+  <article class="restaurant-item" *ngFor="let restaurant of restaurants">
+    <md-card>
+      <md-card-header>
+        <img md-card-avatar src="{{restaurant.image}}">
+        <md-card-title>{{restaurant.name}}</md-card-title>
+        <md-card-subtitle>{{restaurant.cuisine}}</md-card-subtitle>
+      </md-card-header>
+      <img md-card-image src="{{restaurant.image}}">
+      <md-card-content>
+        <section>
+          <p><strong>Address</strong></p>
+          <p>{{restaurant.streetAddress}} <strong>{{restaurant.city}}</strong></p>
+
+          <p><strong>Open Hours</strong></p>
+          <table>
+            <tr>
+              <td>Mon:</td>
+              <td>{{restaurant.monday}}</td>
+            </tr>
+            <tr>
+              <td>Tue:</td>
+              <td>{{restaurant.tuesday}}</td>
+            </tr>
+            <tr>
+              <td>Wed:</td>
+              <td>{{restaurant.wednesday}}</td>
+            </tr>
+            <tr>
+              <td>Thu:</td>
+              <td>{{restaurant.thursday}}</td>
+            </tr>
+            <tr>
+              <td>Fri:</td>
+              <td>{{restaurant.friday}}</td>
+            </tr>
+            <tr>
+              <td>Sat:</td>
+              <td>{{restaurant.saturday}}</td>
+            </tr>
+            <tr>
+              <td>Sun:</td>
+              <td>{{restaurant.sunday}}</td>
+            </tr>
+          </table>
+        </section>
+      </md-card-content>
+    </md-card>
+  </article>
+</main>
