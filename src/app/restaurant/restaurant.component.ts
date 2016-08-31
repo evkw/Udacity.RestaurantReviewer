@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 export class RestaurantComponent {
     @Input() restaurant: RestaurantModel;
     @Input() showLinks: boolean = false;
-
+    private currentRate = 5;
     constructor(private route: Router) { 
         window.scrollTo(0, 0)
     }
