@@ -1,7 +1,8 @@
 import { NgModule }      from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MdCoreModule } from '@angular2-material/core';
 import { MdProgressBarModule } from '@angular2-material/progress-bar';
@@ -27,14 +28,16 @@ import {
   ReviewListResolver,
   ReviewService
 } from './restaurant-review';
-
 import { RestaurantComponent } from './restaurant';
+import { RatingsComponent } from './ratings';
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
     FormsModule,
+    ReactiveFormsModule,
+    CommonModule,
     // Routes
     routing,
     // Material Design
@@ -53,7 +56,8 @@ import { RestaurantComponent } from './restaurant';
     RestaurantListComponent,
     RestaurantFilterCompnent,
     RestaurantReviewComponent,
-    RestaurantComponent
+    RestaurantComponent,
+    RatingsComponent
   ],
   providers: [
     // restaurant-list providers
