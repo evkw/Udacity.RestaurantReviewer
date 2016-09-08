@@ -3,7 +3,7 @@ import { ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/r
 import { ReviewService } from './review.service';
 import { Observable } from 'rxjs';
 
-import { ReviewModel } from './review.model';
+import { ReviewModel } from '../template-review';
 
 export class ReviewListResolver implements Resolve<ReviewModel[]> {
     constructor(@Inject(forwardRef(() => ReviewService))private svc: ReviewService) { }

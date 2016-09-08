@@ -15,12 +15,12 @@ import { MdButtonModule } from '@angular2-material/button';
 
 import { routing } from './app.routing';
 import { AppComponent }  from './app.component';
-import { 
+import {
   RestaurantService,
   RestaurantListComponent,
   RestaurantListResolver } from './restaurant-list';
-import { 
-  RestaurantFilterCompnent, 
+import {
+  RestaurantFilterCompnent,
   RestaurantFilterService } from './filter';
 import {
   RestaurantReviewComponent,
@@ -28,7 +28,8 @@ import {
   ReviewListResolver,
   ReviewService
 } from './restaurant-review';
-import { RestaurantComponent } from './restaurant';
+import { RestaurantComponent } from './template-restaurant';
+import { ReviewTemplateComponent, NewReviewComponent } from './template-review';
 import { RatingsComponent } from './ratings';
 
 @NgModule({
@@ -57,7 +58,9 @@ import { RatingsComponent } from './ratings';
     RestaurantFilterCompnent,
     RestaurantReviewComponent,
     RestaurantComponent,
-    RatingsComponent
+    RatingsComponent,
+    ReviewTemplateComponent,
+    NewReviewComponent
   ],
   providers: [
     // restaurant-list providers

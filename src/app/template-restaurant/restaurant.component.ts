@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { RestaurantModel} from './../restaurant-list/restaurant.model';
+import { RestaurantModel } from './restaurant.model';
 import { Router } from '@angular/router';
 
 @Component({
@@ -10,9 +10,8 @@ import { Router } from '@angular/router';
 export class RestaurantComponent {
     @Input() restaurant: RestaurantModel;
     @Input() showLinks: boolean = false;
-    private currentRate = 5;
-    constructor(private route: Router) { 
-        window.scrollTo(0, 0)
+    constructor(private route: Router) {
+        window.scrollTo(0, 0);
     }
 
     navigateToReviews(restaurantId: number) {

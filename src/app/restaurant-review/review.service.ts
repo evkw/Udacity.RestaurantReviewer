@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { Observable } from 'rxjs';
 
-import { ReviewModel } from './review.model';
+import { ReviewModel } from '../template-review';
 
 @Injectable()
 export class ReviewService {
@@ -12,8 +12,8 @@ export class ReviewService {
   getReviewsByRestaurantId(restaurantId: number): Observable<ReviewModel[]> {
     return this.http.get('./../../assets/Reviews.json')
       .map(res => {
-          let reviews = <ReviewModel[]>res.json()
-          return reviews.filter(item => item.restaurantId == restaurantId);
-        })
+        let reviews = <ReviewModel[]>res.json();
+        return reviews.filter(item => item.restaurantId == restaurantId);
+      });
   }
 }

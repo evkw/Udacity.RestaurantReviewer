@@ -17,7 +17,7 @@ const packages: any = {
 };
 
 // put the names of any of your Material components here
-const materialPkgs:string[] = [
+const materialPkgs: string[] = [
   'core',
   'progress-bar',
   'radio',
@@ -29,7 +29,7 @@ const materialPkgs:string[] = [
 ];
 
 materialPkgs.forEach((pkg) => {
-  packages[`@angular2-material/${pkg}`] = {main: `${pkg}.js`};
+  packages[`@angular2-material/${pkg}`] = { main: `${pkg}.js` };
 });
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
@@ -53,7 +53,8 @@ const barrels: string[] = [
   // App specific barrels.
   'app',
   'app/shared',
-  'app/restaurant',
+  'app/template-restaurant',
+  'app/template-review',
   'app/restaurant-list',
   'app/filter',
   'app/restaurant-review',

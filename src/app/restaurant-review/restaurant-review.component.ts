@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { RestaurantModel } from './../restaurant-list';
-import { ReviewModel } from './review.model';
+import { RestaurantModel } from '../template-restaurant';
+import { ReviewModel } from '../template-review';
 
 @Component({
   moduleId: module.id,
@@ -19,6 +19,6 @@ export class RestaurantReviewComponent {
     route.data.forEach(d => {
       this.restaurant = d['restaurant'];
       this.reviews = d['reviews'];
-    })
+    });
   }
 }

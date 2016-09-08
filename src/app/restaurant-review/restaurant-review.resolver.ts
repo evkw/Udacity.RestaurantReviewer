@@ -1,6 +1,7 @@
 import { Inject, forwardRef } from '@angular/core';
 import { ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/router';
-import { RestaurantService, RestaurantModel } from './../restaurant-list/';
+import { RestaurantService } from './../restaurant-list/';
+import { RestaurantModel } from './../template-restaurant';
 import { Observable } from 'rxjs';
 
 export class RestaurantResolver implements Resolve<RestaurantModel> {

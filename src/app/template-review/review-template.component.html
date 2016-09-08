@@ -1,0 +1,10 @@
+<md-card>
+    <md-card-header>
+        <md-card-title>{{review.name}}</md-card-title>
+        <md-card-subtitle>{{review.date}}</md-card-subtitle>
+        <app-ratings [rating]="review.rating" [readonly]=readonly [itemId]="review.id" (ratingClick)="ratingComponetClick($event)"></app-ratings>
+    </md-card-header>
+    <md-card-content>
+        {{review.comment}}
+    </md-card-content>
+</md-card>

@@ -1,0 +1,7 @@
+<md-card>
+    <form>
+        <md-input placeholder="Name" style="width: 100%" [(ngModel)]="review.name"></md-input>
+        <app-ratings [rating]="1" [readonly]="false" [itemId]="review.id" (ratingClick)="ratingComponetClick($event)"></app-ratings>
+        <md-input placeholder="Comment" style="width: 100%" [(ngModel)]="review.comment"></md-input>
+    </form>
+</md-card>

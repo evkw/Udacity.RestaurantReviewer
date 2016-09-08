@@ -5,4 +5,8 @@ export class ReviewModel {
     rating: number;
     comment: string;
     restaurantId: number;
-}
+
+    constructor() {
+        this.date = new Date(Date.now());
+    }
+};

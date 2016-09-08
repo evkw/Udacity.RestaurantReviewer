@@ -8,10 +8,10 @@ import { RestaurantFilterService } from './filter';
   styleUrls: ['app.component.css']
 })
 
-export class AppComponent { 
+export class AppComponent {
 
-  private filterHidden  = true;
-  constructor(private filterSvc: RestaurantFilterService) {}
+  private filterHidden = true;
+  constructor(private filterSvc: RestaurantFilterService) { }
 
   toggleFilter() {
     this.filterHidden = !this.filterHidden;

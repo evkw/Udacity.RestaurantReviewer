@@ -1,18 +1,17 @@
 <main class="content-page">
   <article class="restaurant-review">
-    <app-restaurant [restaurant]="restaurant"></app-restaurant>
+    <app-restaurant [restaurant]="restaurant">
+      <md-card-actions>
+        <button md-button (click)="addReview()">Add Review</button>
+      </md-card-actions>
+    </app-restaurant>
+
+    <div class="review">
+      <app-new-review></app-new-review>
+    </div>
 
     <div class="review" *ngFor="let review of reviews">
-      <md-card>
-        <md-card-header>
-          <md-card-title>{{review.name}}</md-card-title>
-          <md-card-subtitle>{{review.date}}</md-card-subtitle>
-          <app-ratings [rating]="review.rating" [itemId]="review.id" (ratingClick)="ratingComponetClick($event)"></app-ratings>
-        </md-card-header>
-        <md-card-content>
-            {{review.comment}}
-        </md-card-content>
-      </md-card>
+      <app-review [readonly]="true" [review]="review"></app-review>
     </div>
   </article>
 </main>
