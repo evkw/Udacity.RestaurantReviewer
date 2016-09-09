@@ -1,9 +1,8 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 import { RestaurantModel } from '../template-restaurant';
-import { RestaurantFilterService, FilterModel } from './../filter';
+import { FilterModel } from './../filter';
 
 @Component({
   moduleId: module.id,
@@ -11,22 +10,23 @@ import { RestaurantFilterService, FilterModel } from './../filter';
   templateUrl: 'restaurant-list.component.html',
   styleUrls: ['restaurant-list.component.css']
 })
-export class RestaurantListComponent implements OnInit, OnDestroy {
+export class RestaurantListComponent implements OnInit {
 
-  private filterSubscription: Subscription;
   private filterHidden: boolean = true;
   restaurants: RestaurantModel[];
   data: RestaurantModel[];
 
   constructor(
-    private route: ActivatedRoute,
-    private fltrSvc: RestaurantFilterService) {
+    private route: ActivatedRoute) {
     route.data.forEach(d => this.data = d['restaurants'])
   }
 
   ngOnInit() {
     this.restaurants = this.data;
-    this.filterSubscription = this.fltrSvc.toggleFilter$.subscribe(t => this.filterHidden = t);
+  }
+
+  toggleFilter() {
+    this.filterHidden = !this.filterHidden;
   }
 
   filterChanged(filter: FilterModel) {
@@ -43,10 +43,5 @@ export class RestaurantListComponent implements OnInit, OnDestroy {
     if (filter.cuisine != 'All') {
       this.restaurants = this.restaurants.filter(item => item.cuisine.toLowerCase() == filter.cuisine.toLowerCase())
     }
-    console.log(this.restaurants);
-  }
-
-  ngOnDestroy() {
-    this.filterSubscription.unsubscribe();
   }
 }

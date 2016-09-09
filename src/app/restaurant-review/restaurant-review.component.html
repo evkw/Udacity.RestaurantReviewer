@@ -1,6 +1,14 @@
+<md-toolbar color="primary">
+  <span class="title">Restaurant Reviewer</span>
+</md-toolbar>
+  
+<nav>
+  <button color="primary" class="nav-button" md-button (click)="navigateToRestaurantList()">Return to Restaurant List</button>
+</nav>
+
 <main class="content-page">
   <article class="restaurant-review">
-    <button color="primary" class="nav-button" md-button (click)="navigateToRestaurantList()">Return to Restaurant List</button>
+
     <app-restaurant [restaurant]="restaurant"></app-restaurant>
 
     <div class="review">

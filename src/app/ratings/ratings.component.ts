@@ -11,7 +11,7 @@ export class RatingsComponent implements OnInit {
     @Input() rating: number;
     @Input() itemId: number;
     @Input() readonly: boolean = true;
-    @Output() ratingClick: EventEmitter<Number> = new EventEmitter<Number>();
+    @Output() ratingClick: EventEmitter<number> = new EventEmitter<number>();
 
     inpustName: string;
 

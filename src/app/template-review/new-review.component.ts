@@ -15,12 +15,12 @@ export class NewReviewComponent implements OnInit {
     ngOnInit() {
         this.review = new ReviewModel();
     }
+
     ratingComponetClick($event) {
         this.review.rating = $event;
     }
 
     addReview(value, valid) {
-        console.log(valid);
         if (valid) {
             this.newReview.emit(this.review);
             this.disableNewReview = true;

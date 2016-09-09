@@ -1,31 +1,31 @@
-<div class="rating" [ngClass]="{readonly : readonly}">
+<div aria-label="ratings" class="rating" [ngClass]="{readonly : readonly}">
     <input type="radio" 
         value="5" 
         [name]="inpustName"
         [checked]="rating===5" />
-    <label title="Rocks!" (click)='onClick(5)'><i class="material-icons">star</i></label>
+    <label title="Rocks!" (click)='onClick(5)'><i class="material-icons" aria-label="5 Stars">star</i></label>
 
     <input type="radio" 
         value="4" 
         [name]="inpustName"
         [checked]="rating===4" />
-    <label title="Pretty good" (click)='onClick(4)'><i class="material-icons">star</i></label>
+    <label title="Pretty good" (click)='onClick(4)'><i class="material-icons" aria-label="4 Stars">star</i></label>
 
     <input type="radio" 
         value="3" 
         [name]="inpustName"
         [checked]="rating===3" />
-    <label title="Meh" (click)='onClick(3)'><i class="material-icons">star</i></label>
+    <label title="Meh" (click)='onClick(3)'><i class="material-icons" aria-label="3 Stars">star</i></label>
 
     <input type="radio" 
         value="2" 
         [name]="inpustName"
         [checked]="rating===2" />
-    <label title="Kinda bad" (click)='onClick(2)'><i class="material-icons">star</i></label>
+    <label title="Kinda bad" (click)='onClick(2)'><i class="material-icons" aria-label="2 Stars">star</i></label>
 
     <input type="radio" 
         value="1" 
         [name]="inpustName"
         [checked]="rating===1" />
-    <label title="Sucks big time" (click)='onClick(1)'><i class="material-icons">star</i></label>
+    <label title="Sucks big time" (click)='onClick(1)'><i class="material-icons" aria-label="1 Star">star</i></label>
 </div>

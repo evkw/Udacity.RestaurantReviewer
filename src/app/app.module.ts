@@ -20,9 +20,7 @@ import {
   RestaurantService,
   RestaurantListComponent,
   RestaurantListResolver } from './restaurant-list';
-import {
-  RestaurantFilterCompnent,
-  RestaurantFilterService } from './filter';
+import { RestaurantFilterCompnent } from './filter';
 import {
   RestaurantReviewComponent,
   RestaurantResolver,
@@ -68,8 +66,6 @@ import { RatingsComponent } from './ratings';
     // restaurant-list providers
     RestaurantService,
     RestaurantListResolver,
-    // filter providers
-    RestaurantFilterService,
     // Restaurant review provider
     ReviewService,
     ReviewListResolver,
