@@ -11,7 +11,7 @@ export class RatingsComponent implements OnInit {
     @Input() rating: number;
     @Input() itemId: number;
     @Input() readonly: boolean = true;
-    @Output() ratingClick: EventEmitter<any> = new EventEmitter<any>();
+    @Output() ratingClick: EventEmitter<Number> = new EventEmitter<Number>();
 
     inpustName: string;
 
@@ -20,9 +20,6 @@ export class RatingsComponent implements OnInit {
     }
     onClick(rating: number): void {
         this.rating = rating;
-        this.ratingClick.emit({
-            itemId: this.itemId,
-            rating: rating
-        });
+        this.ratingClick.emit(rating);
     }
 }

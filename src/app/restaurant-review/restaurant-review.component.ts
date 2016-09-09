@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { RestaurantModel } from '../template-restaurant';
 import { ReviewModel } from '../template-review';
@@ -12,13 +12,31 @@ import { ReviewModel } from '../template-review';
 })
 export class RestaurantReviewComponent {
 
-    private restaurant: RestaurantModel;
-    private reviews: ReviewModel;
+  private restaurant: RestaurantModel;
+  private reviews: ReviewModel[];
 
-    constructor(private route: ActivatedRoute) {
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router) {
     route.data.forEach(d => {
       this.restaurant = d['restaurant'];
       this.reviews = d['reviews'];
+      this.reviews.sort((a, b) => {
+        if (a.date > b.date) { return -1; }
+        if (a.date < b.date) { return 1; }
+      });
     });
+  }
+
+  addNewReview(review) {
+    this.reviews.push(review);
+    this.reviews.sort((a, b) => {
+      if (a.date > b.date) { return -1; }
+      if (a.date < b.date) { return 1; }
+    });
+  }
+
+  navigateToRestaurantList() {
+    this.router.navigate(['']);
   }
 }

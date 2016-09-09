@@ -4,6 +4,8 @@ import { Subject } from 'rxjs/Subject';
 @Injectable()
 export class RestaurantFilterService {
 
+  public showFilter: boolean = false;
+
   private toggleFilterSource = new Subject<boolean>();
   toggleFilter$ = this.toggleFilterSource.asObservable();
 

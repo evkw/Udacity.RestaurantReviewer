@@ -26,7 +26,7 @@ export class RestaurantListComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.restaurants = this.data;
-    this.filterSubscription = this.fltrSvc.toggleFilter$.subscribe(t => this.filterHidden = t)
+    this.filterSubscription = this.fltrSvc.toggleFilter$.subscribe(t => this.filterHidden = t);
   }
 
   filterChanged(filter: FilterModel) {

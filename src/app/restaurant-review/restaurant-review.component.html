@@ -1,13 +1,10 @@
 <main class="content-page">
   <article class="restaurant-review">
-    <app-restaurant [restaurant]="restaurant">
-      <md-card-actions>
-        <button md-button (click)="addReview()">Add Review</button>
-      </md-card-actions>
-    </app-restaurant>
+    <button color="primary" class="nav-button" md-button (click)="navigateToRestaurantList()">Return to Restaurant List</button>
+    <app-restaurant [restaurant]="restaurant"></app-restaurant>
 
     <div class="review">
-      <app-new-review></app-new-review>
+      <app-new-review (newReview)="addNewReview($event)"></app-new-review>
     </div>
 
     <div class="review" *ngFor="let review of reviews">

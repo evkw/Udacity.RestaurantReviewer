@@ -11,33 +11,33 @@
             <p>{{restaurant.streetAddress}} <strong>{{restaurant.city}}</strong></p>
 
             <p><strong>Open Hours</strong></p>
-            <table>
+            <table style="width:100%">
                 <tr>
-                    <td>Mon:</td>
-                    <td>{{restaurant.monday}}</td>
+                    <td style="width:50%">Monday:</td>
+                    <td style="width:50%">{{restaurant.monday}}</td>
                 </tr>
                 <tr>
-                    <td>Tue:</td>
+                    <td>Tuesday:</td>
                     <td>{{restaurant.tuesday}}</td>
                 </tr>
                 <tr>
-                    <td>Wed:</td>
+                    <td>Wednesday:</td>
                     <td>{{restaurant.wednesday}}</td>
                 </tr>
                 <tr>
-                    <td>Thu:</td>
+                    <td>Thursday:</td>
                     <td>{{restaurant.thursday}}</td>
                 </tr>
                 <tr>
-                    <td>Fri:</td>
+                    <td>Friday:</td>
                     <td>{{restaurant.friday}}</td>
                 </tr>
                 <tr>
-                    <td>Sat:</td>
+                    <td>Saturday:</td>
                     <td>{{restaurant.saturday}}</td>
                 </tr>
                 <tr>
-                    <td>Sun:</td>
+                    <td>Sunday:</td>
                     <td>{{restaurant.sunday}}</td>
                 </tr>
             </table>
@@ -45,7 +45,5 @@
     </md-card-content>
     <md-card-actions *ngIf="showLinks">
         <button md-button (click)="navigateToReviews(restaurant.id)">See Reviews</button>
-        <button md-button>Add Review</button>
     </md-card-actions>
-    <ng-content></ng-content>
 </md-card>

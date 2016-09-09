@@ -1,8 +1,13 @@
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .rating:not(:checked) > input {
     display: none;
 }
 .rating:not(:checked) > label {
-    float:right;
     width:1em;
     padding:0.1em;
     overflow:hidden;

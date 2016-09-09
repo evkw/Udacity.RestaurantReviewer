@@ -12,6 +12,7 @@ import { MdMenuModule } from '@angular2-material/menu';
 import { MdToolbarModule } from '@angular2-material/toolbar';
 import { MdIconModule } from '@angular2-material/icon';
 import { MdButtonModule } from '@angular2-material/button';
+import { MdInputModule } from '@angular2-material/input';
 
 import { routing } from './app.routing';
 import { AppComponent }  from './app.component';
@@ -49,7 +50,8 @@ import { RatingsComponent } from './ratings';
     MdMenuModule,
     MdToolbarModule,
     MdIconModule,
-    MdButtonModule
+    MdButtonModule,
+    MdInputModule,
   ],
   declarations: [
     // root
