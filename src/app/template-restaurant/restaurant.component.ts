@@ -3,7 +3,6 @@ import { RestaurantModel } from './restaurant.model';
 import { Router } from '@angular/router';
 
 @Component({
-    moduleId: module.id,
     selector: 'app-restaurant',
     templateUrl: 'restaurant.component.html'
 })

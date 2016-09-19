@@ -5,7 +5,6 @@ import { RestaurantModel } from '../template-restaurant';
 import { FilterModel } from './../filter';
 
 @Component({
-  moduleId: module.id,
   selector: 'app-restaurant-list',
   templateUrl: 'restaurant-list.component.html',
   styleUrls: ['restaurant-list.component.css']

@@ -5,7 +5,6 @@ import { RestaurantModel } from '../template-restaurant';
 import { ReviewModel } from '../template-review';
 
 @Component({
-  moduleId: module.id,
   selector: 'app-restaurant-review',
   templateUrl: 'restaurant-review.component.html',
   styleUrls: ['restaurant-review.component.css']
