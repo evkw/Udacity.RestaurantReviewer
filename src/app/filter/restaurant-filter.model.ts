@@ -3,7 +3,7 @@ export class FilterModel {
     cuisine: string;
 
     constructor() {
-        this.city = "All";
-        this.cuisine = "All";
+        this.city = 'All';
+        this.cuisine = 'All';
     }
 }

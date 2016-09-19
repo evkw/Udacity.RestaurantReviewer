@@ -1,10 +1,10 @@
-import { RestaurantReviewerPage } from './app.po';
+import { RestaurantreviewsPage } from './app.po';
 
-describe('restaurant-reviewer App', function() {
-  let page: RestaurantReviewerPage;
+describe('restaurantreviews App', function() {
+  let page: RestaurantreviewsPage;
 
   beforeEach(() => {
-    page = new RestaurantReviewerPage();
+    page = new RestaurantreviewsPage();
   });
 
   it('should display message saying app works', () => {

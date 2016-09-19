@@ -15,5 +15,8 @@
 }
 
 .filter-section {
-    width: 50%;
+    width: 45%;
+}
+.radio-item-block {
+    display: block;
 }

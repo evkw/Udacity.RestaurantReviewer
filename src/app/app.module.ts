@@ -6,29 +6,29 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MdCoreModule } from '@angular2-material/core';
 import { MdProgressBarModule } from '@angular2-material/progress-bar';
-import { MdRadioModule } from '@angular2-material/radio';
+import { MdRadioModule, MdUniqueSelectionDispatcher } from '@angular2-material/radio';
 import { MdCardModule } from '@angular2-material/card';
 import { MdMenuModule } from '@angular2-material/menu';
 import { MdToolbarModule } from '@angular2-material/toolbar';
-import { MdIconModule } from '@angular2-material/icon';
+import { MdIconModule, MdIconRegistry } from '@angular2-material/icon';
 import { MdButtonModule } from '@angular2-material/button';
+import { MdInputModule } from '@angular2-material/input';
 
 import { routing } from './app.routing';
 import { AppComponent }  from './app.component';
-import { 
+import {
   RestaurantService,
   RestaurantListComponent,
   RestaurantListResolver } from './restaurant-list';
-import { 
-  RestaurantFilterCompnent, 
-  RestaurantFilterService } from './filter';
+import { RestaurantFilterCompnent } from './filter';
 import {
   RestaurantReviewComponent,
   RestaurantResolver,
   ReviewListResolver,
   ReviewService
 } from './restaurant-review';
-import { RestaurantComponent } from './restaurant';
+import { RestaurantComponent } from './template-restaurant';
+import { ReviewTemplateComponent, NewReviewComponent } from './template-review';
 import { RatingsComponent } from './ratings';
 
 @NgModule({
@@ -48,7 +48,8 @@ import { RatingsComponent } from './ratings';
     MdMenuModule,
     MdToolbarModule,
     MdIconModule,
-    MdButtonModule
+    MdButtonModule,
+    MdInputModule,
   ],
   declarations: [
     // root
@@ -57,18 +58,20 @@ import { RatingsComponent } from './ratings';
     RestaurantFilterCompnent,
     RestaurantReviewComponent,
     RestaurantComponent,
-    RatingsComponent
+    RatingsComponent,
+    ReviewTemplateComponent,
+    NewReviewComponent
   ],
   providers: [
     // restaurant-list providers
     RestaurantService,
     RestaurantListResolver,
-    // filter providers
-    RestaurantFilterService,
     // Restaurant review provider
     ReviewService,
     ReviewListResolver,
-    RestaurantResolver
+    RestaurantResolver,
+    MdIconRegistry,
+    MdUniqueSelectionDispatcher
   ],
   bootstrap: [AppComponent]
 })

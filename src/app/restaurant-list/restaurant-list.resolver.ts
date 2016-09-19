@@ -3,12 +3,12 @@ import { ActivatedRouteSnapshot, RouterStateSnapshot, Resolve } from '@angular/r
 import { RestaurantService } from './restaurant.service';
 import { Observable } from 'rxjs';
 
-import { RestaurantModel } from './restaurant.model';
+import { RestaurantModel } from '../template-restaurant';
 
 export class RestaurantListResolver implements Resolve<RestaurantModel[]> {
-    constructor(@Inject(forwardRef(() => RestaurantService))private svc: RestaurantService) { }
+    constructor( @Inject(forwardRef(() => RestaurantService)) private svc: RestaurantService) { }
 
-    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<RestaurantModel[]> {   
+    resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<RestaurantModel[]> {
         return this.svc.getRestaurants();
     }
 }

@@ -1,16 +1,24 @@
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
 .rating:not(:checked) > input {
     display: none;
 }
 .rating:not(:checked) > label {
-    float:right;
     width:1em;
     padding:0.1em;
     overflow:hidden;
     white-space:nowrap;
-    cursor:pointer;
     font-size:200%;
     line-height:1.2;
     color:#ddd;
+}
+
+.rating.readonly{
+    cursor:default;
 }
 
 .rating > input:checked ~ label {
@@ -38,4 +46,16 @@
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
     color: #ea0;
+}
+
+ /*Read only styling*/
+.rating.readonly:not(:checked) > label:hover,
+.rating.readonly:not(:checked) > label:hover ~ label {
+    color: #ddd;
+}
+
+.rating.readonly > input:checked ~ label:hover,
+.rating.readonly > input:checked ~ label:hover ~ label,
+.rating.readonly > label:hover ~ input:checked ~ label {
+    color: #f70;
 }
