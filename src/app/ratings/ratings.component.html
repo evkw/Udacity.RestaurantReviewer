@@ -1,31 +1,26 @@
 <div aria-label="ratings" class="rating" [ngClass]="{readonly : readonly}">
-    <input type="radio" 
-        value="5" 
-        [name]="inpustName"
-        [checked]="rating===5" />
-    <label title="Rocks!" (click)='onClick(5)'><i class="material-icons" aria-label="5 Stars">star</i></label>
+    <input type="radio" value="5" [name]="inpustName" [checked]="rating===5" />
 
-    <input type="radio" 
-        value="4" 
-        [name]="inpustName"
-        [checked]="rating===4" />
-    <label title="Pretty good" (click)='onClick(4)'><i class="material-icons" aria-label="4 Stars">star</i></label>
+    <label *ngIf="readonly"><i class="material-icons" aria-label="5 Stars">star</i></label>
+    <label *ngIf="!readonly" tabindex="6" title="Rocks!" (keydown.Enter)='onClick(5)' (click)='onClick(5)'><i class="material-icons" aria-label="5 Stars">star</i></label>
 
-    <input type="radio" 
-        value="3" 
-        [name]="inpustName"
-        [checked]="rating===3" />
-    <label title="Meh" (click)='onClick(3)'><i class="material-icons" aria-label="3 Stars">star</i></label>
+    <input type="radio" value="4" [name]="inpustName" [checked]="rating===4" />
 
-    <input type="radio" 
-        value="2" 
-        [name]="inpustName"
-        [checked]="rating===2" />
-    <label title="Kinda bad" (click)='onClick(2)'><i class="material-icons" aria-label="2 Stars">star</i></label>
+    <label *ngIf="readonly"><i class="material-icons" aria-label="4 Stars">star</i></label>
+    <label *ngIf="!readonly" tabindex="5" title="Pretty good" (keydown.Enter)='onClick(4)' (click)='onClick(4)'><i class="material-icons" aria-label="4 Stars">star</i></label>
 
-    <input type="radio" 
-        value="1" 
-        [name]="inpustName"
-        [checked]="rating===1" />
-    <label title="Sucks big time" (click)='onClick(1)'><i class="material-icons" aria-label="1 Star">star</i></label>
+    <input type="radio" value="3" [name]="inpustName" [checked]="rating===3" />
+
+    <label *ngIf="readonly"><i class="material-icons" aria-label="3 Stars">star</i></label>
+    <label *ngIf="!readonly" tabindex="4" title="Meh" (keydown.Enter)='onClick(3)' (click)='onClick(3)'><i class="material-icons" aria-label="3 Stars">star</i></label>
+
+    <input type="radio" value="2" [name]="inpustName" [checked]="rating===2" />
+
+    <label *ngIf="readonly"><i class="material-icons" aria-label="2 Stars">star</i></label>
+    <label *ngIf="!readonly" tabindex="3" title="Kinda bad" (keydown.Enter)='onClick(2)' (click)='onClick(2)'><i class="material-icons" aria-label="2 Stars">star</i></label>
+
+    <input type="radio" value="1" [name]="inpustName" [checked]="rating===1" [hidden]="true" />
+
+    <label *ngIf="readonly"><i class="material-icons" aria-label="1 Star">star</i></label>
+    <label *ngIf="!readonly" tabindex="2" title="Sucks big time" (keydown.Enter)='onClick(1)' (click)='onClick(1)'><i class="material-icons" aria-label="1 Star">star</i></label>
 </div>

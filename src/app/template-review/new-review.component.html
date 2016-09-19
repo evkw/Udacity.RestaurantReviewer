@@ -1,15 +1,15 @@
 <md-card *ngIf="!disableNewReview">
     <md-card-content>
         <form #f="ngForm">
-            <md-input placeholder="Name" required style="width: 100%" [(ngModel)]="review.name" name="name"></md-input>
-            <md-input placeholder="Comment" required style="width: 100%" [(ngModel)]="review.comment" name="review"></md-input>
+            <md-input tabindex="1" placeholder="Name" required style="width: 100%" [(ngModel)]="review.name" name="name"></md-input>
+            <md-input tabindex="2" placeholder="Comment" required style="width: 100%" [(ngModel)]="review.comment" name="review"></md-input>
             <div style="width: 35%">
                 <label for="rating">Review</label>
                 <app-ratings id="rating" [rating]="review.rating" [readonly]="false" [itemId]="review.name" (ratingClick)="ratingComponetClick($event)"></app-ratings>
             </div>
         </form>
         <md-card-actions>
-            <button md-button color="primary" (click)="addReview(f.value, f.valid)">Submit Review</button>
+            <button tabindex="7" md-button color="primary" (click)="addReview(f.value, f.valid)">Submit Review</button>
         </md-card-actions>
     </md-card-content>
 </md-card>

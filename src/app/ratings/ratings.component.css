@@ -25,6 +25,41 @@
     color: #f70;
 }
 
+.rating:not(:checked) > label:focus,
+.rating:not(:checked) > label:focus ~ label {
+    color: gold;
+}
+
+.rating > input:checked ~ label:focus,
+.rating > input:checked ~ label:focus ~ label,
+.rating > label:focus ~ input:checked ~ label {
+    color: #ea0;
+}
+
+
+.rating:not(:checked) > label:focus,
+.rating:not(:checked) > label:focus ~ label {
+    color: gold;
+}
+
+.rating > input:checked ~ label:focus,
+.rating > input:checked ~ label:focus ~ label,
+.rating > label:focus ~ input:checked ~ label {
+    color: #ea0;
+}
+
+ /*Read only styling*/
+.rating.readonly:not(:checked) > label:focus,
+.rating.readonly:not(:checked) > label:focus ~ label {
+    color: #ddd;
+}
+
+.rating.readonly > input:checked ~ label:focus,
+.rating.readonly > input:checked ~ label:focus ~ label,
+.rating.readonly > label:focus ~ input:checked ~ label {
+    color: #f70;
+}
+
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
     color: gold;
