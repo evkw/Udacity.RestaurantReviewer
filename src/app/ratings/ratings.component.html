@@ -1,4 +1,4 @@
-<div aria-label="ratings" class="rating" [ngClass]="{readonly : readonly}">
+<div [attr.aria-label]="rating + ' star review'" class="rating" [ngClass]="{readonly : readonly}">
     <input type="radio" value="5" [name]="inpustName" [checked]="rating===5" />
 
     <label *ngIf="readonly"><i class="material-icons" aria-label="5 Stars">star</i></label>
