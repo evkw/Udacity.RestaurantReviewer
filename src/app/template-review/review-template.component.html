@@ -1,7 +1,7 @@
 <md-card>
     <md-card-header>
         <div *ngIf="false" id="review-name">Reviewer Name - {{review.name}}</div>
-        <md-card-title aria-labelledby="review-name">{{review.name}}</md-card-title>
+        <md-card-title aria-label="review-name">{{review.name}}</md-card-title>
         <md-card-subtitle>{{review.date}}</md-card-subtitle>
         <app-ratings aria-label="Rating" [rating]="review.rating" [readonly]=readonly [itemId]="review.id" (ratingClick)="ratingComponetClick($event)">{{review.rating}} stars</app-ratings>
     </md-card-header>
@@ -9,14 +9,3 @@
         {{review.comment}}
     </md-card-content>
 </md-card>
-
-<!--<div>
-    <div>Reviewer Name: {{review.name}}</div>
-    <div>review Date: {{review.date}}</div>
-    <div aria-label="Rating">
-        <app-ratings  [rating]="review.rating" [readonly]=readonly [itemId]="review.id" (ratingClick)="ratingComponetClick($event)">{{review.rating}} stars</app-ratings>
-    </div>
-    <div>
-        Comment: {{review.comment}}
-    </div>
-</div>-->
