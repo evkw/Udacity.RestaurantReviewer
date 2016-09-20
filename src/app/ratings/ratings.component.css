@@ -14,7 +14,7 @@
     white-space:nowrap;
     font-size:200%;
     line-height:1.2;
-    color:#ddd;
+    color:#525252;
 }
 
 .rating.readonly{
@@ -22,40 +22,75 @@
 }
 
 .rating > input:checked ~ label {
-    color: #f70;
+    color: #0000ff;
+}
+
+.rating:not(:checked) > label:focus,
+.rating:not(:checked) > label:focus ~ label {
+    color: #0000ff;
+}
+
+.rating > input:checked ~ label:focus,
+.rating > input:checked ~ label:focus ~ label,
+.rating > label:focus ~ input:checked ~ label {
+    color: #0000ff;
+}
+
+
+.rating:not(:checked) > label:focus,
+.rating:not(:checked) > label:focus ~ label {
+    color: #0000ff;
+}
+
+.rating > input:checked ~ label:focus,
+.rating > input:checked ~ label:focus ~ label,
+.rating > label:focus ~ input:checked ~ label {
+    color: #0000ff;
+}
+
+ /*Read only styling*/
+.rating.readonly:not(:checked) > label:focus,
+.rating.readonly:not(:checked) > label:focus ~ label {
+    color: #525252;
+}
+
+.rating.readonly > input:checked ~ label:focus,
+.rating.readonly > input:checked ~ label:focus ~ label,
+.rating.readonly > label:focus ~ input:checked ~ label {
+    color: #0000ff;
 }
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-    color: gold;
+    color: #0000ff;
 }
 
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-    color: #ea0;
+    color: #0000ff;
 }
 
 
 .rating:not(:checked) > label:hover,
 .rating:not(:checked) > label:hover ~ label {
-    color: gold;
+    color: #0000ff;
 }
 
 .rating > input:checked ~ label:hover,
 .rating > input:checked ~ label:hover ~ label,
 .rating > label:hover ~ input:checked ~ label {
-    color: #ea0;
+    color: #0000ff;
 }
 
  /*Read only styling*/
 .rating.readonly:not(:checked) > label:hover,
 .rating.readonly:not(:checked) > label:hover ~ label {
-    color: #ddd;
+    color: #525252;
 }
 
 .rating.readonly > input:checked ~ label:hover,
 .rating.readonly > input:checked ~ label:hover ~ label,
 .rating.readonly > label:hover ~ input:checked ~ label {
-    color: #f70;
+    color: #0000ff;
 }
