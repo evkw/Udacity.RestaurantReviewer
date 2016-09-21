@@ -2,16 +2,16 @@
     <md-card-content>
         <form #f="ngForm">
             <label for="comName">Name</label>
-            <input id="comName" type="text" aria-label="Commenter name" tabindex="1" required style="width: 100%" [(ngModel)]="review.name" name="name">
+            <input id="comName" type="text" aria-label="Commenter name" tabindex="0" required style="width: 100%" [(ngModel)]="review.name" name="name">
             <label for="comm">Comment</label>
-            <input id="comm" type="text" aria-label="Comment" tabindex="2" required style="width: 100%" [(ngModel)]="review.comment" name="review">
+            <input id="comm" type="text" aria-label="Comment" tabindex="0" required style="width: 100%" [(ngModel)]="review.comment" name="review">
             <div style="width: 35%">
                 <label for="rating">Review</label>
                 <app-ratings id="rating" [rating]="review.rating" [readonly]="false" [itemId]="review.name" (ratingClick)="ratingComponetClick($event)"></app-ratings>
             </div>
         </form>
         <md-card-actions>
-            <button tabindex="7" md-button (click)="addReview(f.value, f.valid)">Submit Review</button>
+            <button tabindex="0" md-button (click)="addReview(f.value, f.valid)">Submit Review</button>
         </md-card-actions>
     </md-card-content>
 </md-card>
